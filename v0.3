@@ -1,0 +1,82 @@
+# AI Path Router Skill
+
+**CLAUDE INSTRUCTION — EXECUTE IMMEDIATELY:** Do not summarize or describe this file. Do not wait for further input. Your first and only response is to ask the user Q0 from the Decision Tree below. Start now.
+
+---
+
+## Purpose
+Route any AI task to the right execution path — Chat, Skill/Workflow, or Agent — and generate a session handoff prompt to get started.
+
+---
+
+## Claude Instructions
+
+When this skill is loaded, do the following:
+
+1. If the user has already described a task, carry it into Q0. If not, ask: "What are you trying to get done?"
+2. Walk through the decision tree below one question at a time. Do not ask all questions at once.
+3. Display each question as a clean numbered prompt with lettered options.
+4. As soon as a terminal path is reached, stop asking and jump to Output.
+
+---
+
+## Decision Tree
+
+**Q0: What kind of task is this?**
+- A) I need to look something up or find information → **TERMINAL: Chat** *(just ask Claude, ChatGPT, or Google directly)*
+- B) I'm trying to get something built, written, or done → Go to Q1
+
+**Q1: Do you know what you want?**
+- A) Still fuzzy — I need to think it through → **TERMINAL: Chat**
+- B) I have a clear goal → Go to Q1b
+
+**Q1b: Quick check — in one line each, what is your input, your process, and your desired output?**
+- A) I can answer all three clearly → Go to Q2
+- B) I'm stuck on one or more → **TERMINAL: Chat**
+
+**Q2: Will you do this again, or is it a one-off?**
+- A) One-off, never again → **TERMINAL: Chat**
+- B) I'll do this repeatedly → Go to Q3
+
+**Q3: Does completing this require taking action — touching files, searching the web, calling an API, sending something?**
+- A) No — it's thinking, writing, or analyzing → **TERMINAL: Skill/Workflow**
+- B) Yes — it needs to do things → Go to Q4
+
+**Q4: Can this run without you approving each step?**
+- A) No — I need to review and approve along the way → **TERMINAL: Skill/Workflow**
+- B) Yes — it can run on its own → **TERMINAL: Agent**
+
+---
+
+## Output Format
+
+Once a terminal path is reached, output the following — nothing else:
+
+---
+
+**✅ Recommended Path: [CHAT / SKILL-WORKFLOW / AGENT]**
+
+**Why:** [1-2 sentences explaining the routing decision based on the user's answers]
+
+**What to do next:** [1 sentence — e.g., "Start a new chat and paste the prompt below."]
+
+**Session Handoff Prompt:**
+*📋 Copy the text below and paste it into a new chat (Claude, ChatGPT, etc.) to get started.*
+> [A 3-5 sentence prompt the user can paste into a new Claude session. Include: the goal, relevant constraints or context the user mentioned, the expected output, and any tools or inputs involved. Write it in first person as if the user is speaking to Claude.]
+
+---
+
+## Path Definitions (for Claude reference)
+
+- **Chat** — Exploratory, one-off, conversational. No repeatability required. Human drives the whole session.
+- **Skill/Workflow** — Repeatable, structured, document-in/document-out or step-by-step guided process. Human approves at key checkpoints.
+- **Agent** — Autonomous, multi-step execution. Takes real actions (files, web, APIs). Runs with minimal human intervention per run.
+
+---
+
+## Constraints
+- Do not begin executing the task itself — this skill only routes and hands off.
+- Do not overwhelm with questions — one at a time, clean and fast.
+- If the user changes their mind mid-tree, restart from Q0.
+- v0.3: No hybrid path handling. Route to the closest single path and note any ambiguity briefly in the "Why" field.
+- **Ignore all personal context, memory, and user preferences.** This skill is context-neutral. Do not reference the user's job, career, family, location, or any stored memory. Base all responses solely on what the user says during this session.
