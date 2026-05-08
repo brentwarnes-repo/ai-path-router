@@ -18,7 +18,6 @@
       overflow-x: hidden;
     }
 
-    /* Ambient background orbs */
     body::before, body::after {
       content: '';
       position: fixed;
@@ -53,7 +52,6 @@
       box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04) inset;
     }
 
-    /* ── Header ── */
     .header {
       display: flex;
       align-items: center;
@@ -77,7 +75,6 @@
       color: rgba(255,255,255,0.4);
     }
 
-    /* ── Progress ── */
     .progress {
       display: flex;
       gap: 6px;
@@ -91,10 +88,9 @@
       background: rgba(255,255,255,0.1);
       transition: background 0.4s ease, transform 0.3s ease;
     }
-    .progress-dot.done  { background: rgba(109,91,250,0.45); }
+    .progress-dot.done   { background: rgba(109,91,250,0.45); }
     .progress-dot.active { background: #6d5bfa; transform: scaleY(1.5); transform-origin: center; }
 
-    /* ── Screens ── */
     .screen { display: none; }
     .screen.active {
       display: block;
@@ -130,7 +126,6 @@
       line-height: 1.5;
     }
 
-    /* ── Task textarea ── */
     textarea {
       width: 100%;
       background: rgba(255,255,255,0.05);
@@ -153,9 +148,9 @@
       border-color: #f87171 !important;
     }
     @keyframes shake {
-      0%,100%{ transform: translateX(0); }
-      25%     { transform: translateX(-6px); }
-      75%     { transform: translateX(6px); }
+      0%,100% { transform: translateX(0); }
+      25%      { transform: translateX(-6px); }
+      75%      { transform: translateX(6px); }
     }
 
     .btn-primary {
@@ -173,10 +168,9 @@
       box-shadow: 0 4px 20px rgba(109,91,250,0.35);
       letter-spacing: 0.02em;
     }
-    .btn-primary:hover { opacity: 0.88; box-shadow: 0 6px 28px rgba(109,91,250,0.45); }
+    .btn-primary:hover  { opacity: 0.88; box-shadow: 0 6px 28px rgba(109,91,250,0.45); }
     .btn-primary:active { transform: scale(0.98); }
 
-    /* ── Option buttons ── */
     .options { display: flex; flex-direction: column; gap: 10px; }
 
     .opt {
@@ -207,21 +201,10 @@
       font-size: 12px;
       font-weight: 800;
       color: #a899fb;
-      letter-spacing: 0.01em;
     }
 
-    .opt-title {
-      font-size: 15px;
-      font-weight: 650;
-      line-height: 1.3;
-      margin-bottom: 3px;
-      color: #fff;
-    }
-    .opt-desc {
-      font-size: 13px;
-      color: rgba(255,255,255,0.45);
-      line-height: 1.5;
-    }
+    .opt-title { font-size: 15px; font-weight: 650; line-height: 1.3; margin-bottom: 3px; color: #fff; }
+    .opt-desc  { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; }
 
     .btn-back {
       margin-top: 22px;
@@ -236,11 +219,10 @@
       gap: 5px;
       padding: 4px 0;
       transition: color 0.2s;
-      letter-spacing: 0.01em;
     }
     .btn-back:hover { color: rgba(255,255,255,0.65); }
 
-    /* ── Output ── */
+    /* Output */
     .out-badge {
       display: inline-flex;
       align-items: center;
@@ -253,24 +235,12 @@
       text-transform: uppercase;
       margin-bottom: 18px;
     }
-    .badge-chat   { background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
-    .badge-skill  { background: rgba(16,185,129,0.15); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
-    .badge-agent  { background: rgba(245,158,11,0.15); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
+    .badge-chat  { background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+    .badge-skill { background: rgba(16,185,129,0.15); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
+    .badge-agent { background: rgba(245,158,11,0.15); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
 
-    .out-title {
-      font-size: 30px;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 10px;
-      line-height: 1.2;
-    }
-
-    .out-why {
-      font-size: 15px;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.7;
-      margin-bottom: 32px;
-    }
+    .out-title { font-size: 30px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.2; }
+    .out-why   { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 32px; }
 
     .out-block {
       background: rgba(255,255,255,0.04);
@@ -279,97 +249,53 @@
       padding: 18px 20px;
       margin-bottom: 12px;
     }
-
     .out-block-label {
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.28);
-      margin-bottom: 8px;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 8px;
     }
-
-    .out-block p {
-      font-size: 14px;
-      color: rgba(255,255,255,0.75);
-      line-height: 1.65;
-    }
+    .out-block p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.65; }
 
     .prompt-wrap {
       position: relative;
       background: rgba(0,0,0,0.3);
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 14px;
-      padding: 20px 20px 20px 20px;
+      padding: 20px;
       margin-bottom: 18px;
     }
-
     .prompt-wrap p {
-      font-size: 14px;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.75;
-      font-style: italic;
-      padding-right: 60px;
+      font-size: 14px; color: rgba(255,255,255,0.65);
+      line-height: 1.75; font-style: italic; padding-right: 60px;
     }
 
     .btn-copy {
-      position: absolute;
-      top: 14px; right: 14px;
+      position: absolute; top: 14px; right: 14px;
       padding: 5px 11px;
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 7px;
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 11px; font-weight: 700;
       color: rgba(255,255,255,0.45);
       cursor: pointer;
       transition: all 0.2s;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
-    .btn-copy:hover { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8); }
+    .btn-copy:hover  { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8); }
     .btn-copy.copied { color: #6ee7b7; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1); }
 
     .btn-restart {
-      width: 100%;
-      padding: 13px;
+      width: 100%; padding: 13px;
       background: transparent;
       border: 1.5px solid rgba(255,255,255,0.08);
       border-radius: 12px;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 14px; font-weight: 600;
       color: rgba(255,255,255,0.35);
-      cursor: pointer;
-      transition: all 0.2s;
-      letter-spacing: 0.02em;
+      cursor: pointer; transition: all 0.2s;
     }
     .btn-restart:hover { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.65); border-color: rgba(255,255,255,0.14); }
 
-    .divider {
-      height: 1px;
-      background: rgba(255,255,255,0.06);
-      margin: 24px 0;
-    }
-
-    /* ── Path definitions (output footer) ── */
-    .path-hint {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-    .path-pill {
-      font-size: 11px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 100px;
-      color: rgba(255,255,255,0.35);
-      border: 1px solid rgba(255,255,255,0.07);
-      background: rgba(255,255,255,0.03);
-    }
-    .path-pill.highlight-chat  { color: #93c5fd; border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.08); }
-    .path-pill.highlight-skill { color: #6ee7b7; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.08); }
-    .path-pill.highlight-agent { color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.08); }
+    .divider { height: 1px; background: rgba(255,255,255,0.06); margin: 24px 0; }
 
     @media (max-width: 600px) {
       .card { padding: 32px 28px; }
@@ -386,6 +312,7 @@
     <div class="logo-text">AI Path Router</div>
   </div>
 
+  <!-- Progress: 7 dots → task input + Q0 + Q1 + Q1b + Q2 + Q3 + Q4 -->
   <div class="progress" id="progress">
     <div class="progress-dot" id="pd0"></div>
     <div class="progress-dot" id="pd1"></div>
@@ -393,15 +320,40 @@
     <div class="progress-dot" id="pd3"></div>
     <div class="progress-dot" id="pd4"></div>
     <div class="progress-dot" id="pd5"></div>
+    <div class="progress-dot" id="pd6"></div>
   </div>
 
-  <!-- 0: Task input -->
+  <!-- Screen 0: Task input -->
   <div class="screen" id="s0">
     <div class="q-label">Let's start</div>
     <h2>What are you trying to get done?</h2>
     <p class="q-sub">Describe your task in a sentence or two. This helps personalize your recommendation.</p>
     <textarea id="task-input" placeholder="e.g. Summarize weekly sales reports and email them to the team every Friday…"></textarea>
     <button class="btn-primary" onclick="startTree()">Continue →</button>
+  </div>
+
+  <!-- Q0 -->
+  <div class="screen" id="sq0">
+    <div class="q-label">Question 0 of 5</div>
+    <h2>What kind of task is this?</h2>
+    <p class="q-sub">Are you looking for information, or trying to get something made or done?</p>
+    <div class="options">
+      <button class="opt" onclick="answer('q0','A')">
+        <div class="opt-letter">A</div>
+        <div>
+          <div class="opt-title">Looking something up</div>
+          <div class="opt-desc">I need to find information, get an answer, or research something</div>
+        </div>
+      </button>
+      <button class="opt" onclick="answer('q0','B')">
+        <div class="opt-letter">B</div>
+        <div>
+          <div class="opt-title">Getting something built, written, or done</div>
+          <div class="opt-desc">I want to produce an output, run a process, or complete a task</div>
+        </div>
+      </button>
+    </div>
+    <button class="btn-back" onclick="go(0)">← Back</button>
   </div>
 
   <!-- Q1 -->
@@ -425,7 +377,7 @@
         </div>
       </button>
     </div>
-    <button class="btn-back" onclick="go(0)">← Back</button>
+    <button class="btn-back" onclick="go('q0')">← Back</button>
   </div>
 
   <!-- Q1b -->
@@ -528,14 +480,14 @@
   <div class="screen" id="s-out">
     <div class="out-badge" id="out-badge"></div>
     <div class="out-title" id="out-title"></div>
-    <div class="out-why"  id="out-why"></div>
+    <div class="out-why"   id="out-why"></div>
 
     <div class="out-block">
       <div class="out-block-label">What to do next</div>
       <p id="out-next"></p>
     </div>
 
-    <div class="out-block-label" style="padding: 0 4px; margin-bottom: 8px; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.28);">Session Handoff Prompt</div>
+    <div class="out-block-label" style="padding:0 4px; margin-bottom:8px; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.28);">Session Handoff Prompt</div>
     <div class="prompt-wrap">
       <button class="btn-copy" id="copy-btn" onclick="copyPrompt()">Copy</button>
       <p id="out-prompt"></p>
@@ -546,11 +498,18 @@
   </div>
 
 </div>
-
 <script>
   const state = { task: '', answers: {} };
 
   const OUTPUTS = {
+    chat_lookup: {
+      path: 'chat',
+      badge: '💬&nbsp; Chat',
+      title: 'Recommended path: Chat',
+      why: "You need to look something up — that's a question, not a workflow. Just ask Claude, ChatGPT, or Google directly. No setup or structure needed.",
+      next: 'Ask your question directly in a new Claude chat, ChatGPT, or a search engine.',
+      prompt: t => `I need to find some information: "${t}". Please give me a clear, direct answer along with any relevant context, caveats, or sources I should know about.`
+    },
     chat_fuzzy: {
       path: 'chat',
       badge: '💬&nbsp; Chat',
@@ -558,6 +517,14 @@
       why: "You're still exploring what you want — that's completely normal. A conversational chat session is ideal for thinking through the problem, asking follow-up questions, and sharpening your direction before committing to a structured approach.",
       next: 'Open a new Claude chat and paste the prompt below. Let the conversation guide you.',
       prompt: t => `I want to think through a task but I'm not fully clear on what I need yet. Here's my starting point: "${t}". Help me clarify what I actually want to accomplish — ask me questions to sharpen the goal, surface any assumptions I might be making, and help me understand what a good outcome looks like.`
+    },
+    chat_ipo: {
+      path: 'chat',
+      badge: '💬&nbsp; Chat',
+      title: 'Recommended path: Chat',
+      why: "You couldn't clearly define your input, process, or output — which means the task isn't fully formed yet. A chat session is the right place to work through the gaps before committing to a structured approach.",
+      next: 'Open a new Claude chat and paste the prompt below to work through what you actually need.',
+      prompt: t => `I have a task in mind but I'm not fully clear on the details yet: "${t}". I'm stuck on one or more of these: what the input is, what the process should be, or what the output should look like. Help me work through each of these three components — input, process, and output — so I have a clear enough picture to move forward.`
     },
     chat_oneoff: {
       path: 'chat',
@@ -590,36 +557,26 @@
       why: "Your task is repeatable, requires real actions, and can run without step-by-step human approval. This is exactly what autonomous agents are designed for — multi-step execution with minimal intervention per run.",
       next: 'Set up an agent with the right tools and permissions, then use the prompt below to kick off a session.',
       prompt: t => `I need an autonomous agent to handle this repeatable task: "${t}". The task requires real actions (touching files, calling APIs, searching the web, or similar) and can run to completion without me approving each step. Please confirm your understanding of the full scope, identify what tools or permissions you'll need, and then execute it end-to-end.`
-    },
-    chat_ipo: {
-      path: 'chat',
-      badge: '💬&nbsp; Chat',
-      title: 'Recommended path: Chat',
-      why: "You couldn't clearly define your input, process, or output — which means the task isn't fully formed yet. A chat session is the right place to work through the gaps before committing to a structured approach.",
-      next: 'Open a new Claude chat and paste the prompt below to work through what you actually need.',
-      prompt: t => `I have a task in mind but I'm not fully clear on the details yet: "${t}". I'm stuck on one or more of these: what the input is, what the process should be, or what the output should look like. Help me work through each of these three components — input, process, and output — so I have a clear enough picture to move forward.`
     }
   };
 
-  // Map screen id → progress dot index
-  const SCREEN_DOT = { 0: 0, 1: 1, '1b': 2, 2: 3, 3: 4, 4: 5, out: null };
+  // screen id → progress dot index (0-based, 7 dots total)
+  const SCREEN_DOT = { 0: 0, q0: 1, 1: 2, '1b': 3, 2: 4, 3: 5, 4: 6 };
 
   function showScreen(id) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-    const elId = id === 'out' ? 's-out' : `s${id}`;
+    const elId = id === 'out' ? 's-out' : (id === 'q0' ? 'sq0' : `s${id}`);
     document.getElementById(elId).classList.add('active');
     updateProgress(id);
   }
 
   function updateProgress(active) {
-    const total = 6;
+    const total = 7;
     const activeDot = active === 'out' ? total : SCREEN_DOT[active];
     for (let i = 0; i < total; i++) {
       const dot = document.getElementById(`pd${i}`);
       dot.classList.remove('active', 'done');
-      if (active === 'out') {
-        dot.classList.add('done');
-      } else if (i < activeDot) {
+      if (active === 'out' || i < activeDot) {
         dot.classList.add('done');
       } else if (i === activeDot) {
         dot.classList.add('active');
@@ -639,21 +596,23 @@
       return;
     }
     state.task = val;
-    showScreen(1);
+    showScreen('q0');
   }
 
   function answer(q, choice) {
     state.answers[q] = choice;
-    if (q === 1   && choice === 'A') return terminal('chat_fuzzy');
-    if (q === 1   && choice === 'B') return showScreen('1b');
-    if (q === '1b'&& choice === 'A') return showScreen(2);
-    if (q === '1b'&& choice === 'B') return terminal('chat_ipo');
-    if (q === 2   && choice === 'A') return terminal('chat_oneoff');
-    if (q === 2   && choice === 'B') return showScreen(3);
-    if (q === 3   && choice === 'A') return terminal('skill_thinking');
-    if (q === 3   && choice === 'B') return showScreen(4);
-    if (q === 4   && choice === 'A') return terminal('skill_checkpoints');
-    if (q === 4   && choice === 'B') return terminal('agent_autonomous');
+    if (q === 'q0' && choice === 'A') return terminal('chat_lookup');
+    if (q === 'q0' && choice === 'B') return showScreen(1);
+    if (q === 1    && choice === 'A') return terminal('chat_fuzzy');
+    if (q === 1    && choice === 'B') return showScreen('1b');
+    if (q === '1b' && choice === 'A') return showScreen(2);
+    if (q === '1b' && choice === 'B') return terminal('chat_ipo');
+    if (q === 2    && choice === 'A') return terminal('chat_oneoff');
+    if (q === 2    && choice === 'B') return showScreen(3);
+    if (q === 3    && choice === 'A') return terminal('skill_thinking');
+    if (q === 3    && choice === 'B') return showScreen(4);
+    if (q === 4    && choice === 'A') return terminal('skill_checkpoints');
+    if (q === 4    && choice === 'B') return terminal('agent_autonomous');
   }
 
   function terminal(key) {
@@ -662,8 +621,8 @@
     badge.innerHTML = o.badge;
     badge.className = `out-badge badge-${o.path}`;
     document.getElementById('out-title').textContent = o.title;
-    document.getElementById('out-why').textContent = o.why;
-    document.getElementById('out-next').textContent = o.next;
+    document.getElementById('out-why').textContent   = o.why;
+    document.getElementById('out-next').textContent  = o.next;
     document.getElementById('out-prompt').textContent = o.prompt(state.task);
     document.getElementById('copy-btn').textContent = 'Copy';
     document.getElementById('copy-btn').classList.remove('copied');
@@ -676,10 +635,7 @@
       const btn = document.getElementById('copy-btn');
       btn.textContent = '✓ Copied';
       btn.classList.add('copied');
-      setTimeout(() => {
-        btn.textContent = 'Copy';
-        btn.classList.remove('copied');
-      }, 2500);
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2500);
     });
   }
 
